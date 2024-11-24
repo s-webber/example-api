@@ -1,0 +1,54 @@
+= API Documentation
+:toc:
+:toclevels: 2
+
+== Creating a patient record
+include::{snippets}/create/http-request.adoc[]
+include::{snippets}/create/http-response.adoc[]
+
+== Updating a patient record
+include::{snippets}/update/http-request.adoc[]
+include::{snippets}/update/http-response.adoc[]
+
+== Creating a patient record for NHS number that already exists
+
+It is not possible to create a patient record if there is already a record of the NHS number in the database.
+
+include::{snippets}/create-nhs-number-already-exists/http-request.adoc[]
+include::{snippets}/create-nhs-number-already-exists/http-response.adoc[]
+
+== Updating a patient record for NHS number that does not already exist
+
+It is not possible to update a patient record if there is not already a record of the NHS number in the database.
+
+include::{snippets}/update-nhs-number-not-found/http-request.adoc[]
+include::{snippets}/update-nhs-number-not-found/http-response.adoc[]
+
+== Invalid values
+
+For more information about the validation rules see:
+
+- https://en.wikipedia.org/wiki/NHS_number#Format,_number_ranges,_and_check_characters[NHS number format]
+- https://en.wikipedia.org/wiki/Postcodes_in_the_United_Kingdom#Formatting[Postcode format]
+
+include::{snippets}/invalid-values/http-request.adoc[]
+include::{snippets}/invalid-values/http-response.adoc[]
+
+== No values
+
+`nhsNumber`, `name` and `dateOfBirth` are mandatory.
+
+include::{snippets}/empty-json/http-request.adoc[]
+include::{snippets}/empty-json/http-response.adoc[]
+
+== Empty request body
+include::{snippets}/empty-body/http-request.adoc[]
+include::{snippets}/empty-body/http-response.adoc[]
+
+== Unsupported media type
+include::{snippets}/unsupported-media-type/http-request.adoc[]
+include::{snippets}/unsupported-media-type/http-response.adoc[]
+
+== Request body not valid JSON
+include::{snippets}/invalid-body/http-request.adoc[]
+include::{snippets}/invalid-body/http-response.adoc[]

@@ -1,0 +1,14 @@
+spring:
+    config:
+        activate:
+            on-profile: dev
+    sql:
+        init:
+            mode: EMBEDDED
+    datasource:
+        url: jdbc:h2:mem:testdb;MODE=PostgreSQL
+        username: sa
+        password:
+    devtools:
+        restart:
+            enabled: true

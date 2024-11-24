@@ -1,0 +1,12 @@
+spring:
+    config:
+        activate:
+            on-profile: integration
+    datasource:
+        url: jdbc:postgresql://localhost:5432/api_integration
+        username: testuser
+        password: testpassword
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+    devtools:
+        add-properties: false
