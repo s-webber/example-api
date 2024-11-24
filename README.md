@@ -1,4 +1,6 @@
-API that inserts and updates a database. Uses client certificates for authentication.
+[![Build and test with Maven and Postgres](https://github.com/s-webber/example-api/actions/workflows/ci-maven-postgres.yml/badge.svg?branch=dev)](https://github.com/s-webber/example-api/actions/workflows/ci-maven-postgres.yml)
+
+API that inserts and updates records of a Postgres database. Uses client certificates for authentication.
 
 Can build using:
 
